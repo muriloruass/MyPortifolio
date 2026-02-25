@@ -83,10 +83,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        navbar.style.background = 'rgba(15, 23, 42, 0.98)';
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.background = 'rgba(15, 23, 42, 0.75)';
     }
 });
 
@@ -188,7 +188,7 @@ const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         // Get form values
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
@@ -214,7 +214,7 @@ window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroContent = document.querySelector('.hero-content');
     const particles = document.querySelectorAll('.particle');
-    
+
     if (heroContent && scrolled < window.innerHeight) {
         heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
         heroContent.style.opacity = 1 - (scrolled / window.innerHeight);
@@ -242,9 +242,9 @@ const highlightNavigation = () => {
 
         if (navLink) {
             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                navLink.style.color = '#667eea';
+                navLink.style.color = '#3b82f6';
             } else {
-                navLink.style.color = '#2d3748';
+                navLink.style.color = '#f8fafc';
             }
         }
     });
@@ -262,16 +262,16 @@ projectCards.forEach(card => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        
+
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-        
+
         const rotateX = (y - centerY) / 20;
         const rotateY = (centerX - x) / 20;
-        
+
         card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
     });
-    
+
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
     });
@@ -301,9 +301,9 @@ const createScrollToTop = () => {
         font-size: 1.2rem;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     `;
-    
+
     document.body.appendChild(scrollBtn);
-    
+
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 300) {
             scrollBtn.style.opacity = '1';
@@ -311,18 +311,18 @@ const createScrollToTop = () => {
             scrollBtn.style.opacity = '0';
         }
     });
-    
+
     scrollBtn.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
     });
-    
+
     scrollBtn.addEventListener('mouseenter', () => {
         scrollBtn.style.transform = 'scale(1.1)';
     });
-    
+
     scrollBtn.addEventListener('mouseleave', () => {
         scrollBtn.style.transform = 'scale(1)';
     });
@@ -336,7 +336,7 @@ createScrollToTop();
 const createMoreParticles = () => {
     const heroBackground = document.querySelector('.hero-background');
     const particleCount = 10;
-    
+
     for (let i = 5; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
