@@ -2,109 +2,141 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Murilo Ruas - Portfolio Website">
-    <title>Murilo Lucena | Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- titulo -->
+    <title> Murilo Lucena · IT Analyst Student</title>
+
+    <!-- Fontes do Google — Syne (display) + DM Sans (corpo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+        rel="stylesheet" />
+
+    <!-- Ícones (Font Awesome via CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Estilos externos -->
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">MR</a>
-            <ul class="nav-menu">
+
+    <!-- =============================================
+       NAVBAR
+       ============================================= -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <!-- LOGO  M.L-->
+            <a href="#home" class="nav-logo">M<span>.</span>L</a>
+
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <div class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-        </div>
-        <div class="hero-content">
-            <h1 class="hero-title">
-                Hi, I'm <span class="highlight">Murilo Ruas</span>
-            </h1>
-            <p class="hero-subtitle">
-                <span class="typed-text"></span><span class="cursor">&nbsp;</span>
-            </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+    <!-- =============================================
+       HERO — SEÇÃO PRINCIPAL
+       ============================================= -->
+    <section class="hero" id="home">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="container">
+            <div class="hero-content">
+
+                <!-- Badge de disponibilidade -->
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    <!-- Altere o texto do badge -->
+                    Available for internships &amp; projects
+                </div>
+
+                <!-- Nome  -->
+                <h1>
+                    Hi, I'm<br>
+                    <span class="name">Murilo Lucena</span>
+                </h1>
+
+                <p class="hero-subtitle">IT Analyst Student · La Salle, Montréal</p>
+
+                <!-- Texto animado — altere as frases no JavaScript -->
+                <div class="typed-wrap">
+                    <span id="typed"></span><span class="cursor"></span>
+                </div>
+
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-folder-open"></i> View projects
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-paper-plane"></i> Get in touch
+                    </a>
+                </div>
             </div>
-            <div class="social-links">
-                <a href="https://github.com/muriloruass" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span></span>
-            <span>Scroll</span>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
+    <!-- =============================================
+       SOBRE MIM
+       ============================================= -->
+    <section class="section" id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-user"></i>
+            <p class="section-label">Who I am</p>
+            <h2 class="section-title">About <span>me</span></h2>
+
+            <div class="about-grid">
+                <!-- FOTO — substitua o src pelo caminho da sua foto -->
+                <div class="about-photo-wrap fade-up">
+                    <img src="https://placehold.co/400x500/12121a/00e5ff?text=Your+Photo" alt="Photo of Murilo Lucena"
+                        class="about-photo" />
+                    <div class="about-tag">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <!-- Altere a localização se quiser -->
+                        Montréal, QC 🇨🇦
                     </div>
                 </div>
-                <div class="about-text">
-                    <h3>Hello! I'm Murilo</h3>
+
+                <!-- TEXTO — edite os parágrafos abaixo com a sua história -->
+                <div class="about-text fade-up">
                     <p>
-                        I'm a passionate developer focused on creating beautiful, functional,
-                        and user-friendly digital experiences. With expertise in web development
-                        and a keen eye for design, I bring ideas to life through code.
+                        I'm <strong>Brazilian</strong>, living in Montréal and studying
+                        <strong>IT Analyst at Collège La Salle</strong>. This is my first
+                        serious deep-dive into technology, and I'm loving every step of the journey.
                     </p>
                     <p>
-                        My journey in tech started with curiosity and evolved into a profession
-                        I truly love. I'm constantly learning new technologies and improving my
-                        skills to deliver the best possible solutions.
+                        I've been building skills in web development, networking, and programming logic.
+                        My goal is to deliver <strong>real solutions</strong> that combine
+                        solid technique with clean, functional design.
                     </p>
+                    <p>
+                        Dev, gamer, and tennis player. I’m a Brazilian in Montreal who can’t sit still:
+                         if I’m not coding a new project, I’m working on my backhand or exploring the local culture.
+                          I'm all about merging the roots I brought from home with the opportunities Canada has to offer..
+                    </p>
+
+                    <!-- Cards de estatísticas — altere os números e descrições -->
                     <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="10">0</span>
-                            <span class="stat-label">Projects Completed</span>
+                        <div class="stat-card fade-up">
+                            <div class="stat-num">3rd</div>
+                            <div class="stat-desc">Year of study</div>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="2">0</span>
-                            <span class="stat-label">Happy Clients</span>
+                        <div class="stat-card fade-up">
+                            <div class="stat-num">7+</div>
+                            <div class="stat-desc">Projects completed</div>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="1">0</span>
-                            <span class="stat-label">Years Experience</span>
+                        <div class="stat-card fade-up">
+                            <div class="stat-num">3</div>
+                            <div class="stat-desc">Languages</div>
                         </div>
                     </div>
                 </div>
@@ -112,263 +144,271 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
+    <!-- =============================================
+       HABILIDADES
+       ============================================= -->
+    <section class="section skills-bg" id="skills">
         <div class="container">
-            <h2 class="section-title">My Skills</h2>
+            <p class="section-label">What I know</p>
+            <h2 class="section-title">My <span>skills</span></h2>
+
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Frontend</h3>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>HTML/CSS</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="90"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>JavaScript</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>React</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="80"></div>
-                        </div>
+
+                <!-- =============================================
+             CARD DE SKILL — duplique este bloco para adicionar mais
+             ============================================= -->
+                <div class="skill-card fade-up">
+                    <div class="skill-card-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Frontend</h3>
+                    <div class="skill-tags">
+                        <!-- Altere ou remova as tags conforme as suas habilidades -->
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Responsive</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> Backend</h3>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Node.js</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="75"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Python</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="70"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Databases</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="75"></div>
-                        </div>
+                <div class="skill-card fade-up">
+                    <div class="skill-card-icon"><i class="fas fa-server"></i></div>
+                    <h3>Backend &amp; Databases</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">APIs REST</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools & Others</h3>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Git/GitHub</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>UI/UX Design</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="70"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Responsive Design</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="90"></div>
-                        </div>
+                <div class="skill-card fade-up">
+                    <div class="skill-card-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Networking &amp; Infrastructure</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">TCP/IP</span>
+                        <span class="skill-tag">DNS</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Virtualization</span>
                     </div>
                 </div>
+
+                <div class="skill-card fade-up">
+                    <div class="skill-card-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Figma</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects section">
+    <!-- =============================================
+       PROJETOS
+       ============================================= -->
+    <section class="section" id="projects">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
+            <p class="section-label">What I've built</p>
+            <h2 class="section-title">My <span>projects</span></h2>
+
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/667eea/ffffff?text=Project+1" alt="Project 1">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                        </div>
+
+                <!-- =============================================
+             PROJETO 1 — duplique este bloco para mais projetos
+
+             Como personalizar:
+             - Coloque o print do projeto em src da tag <img>
+             - Altere o nome, descrição e tags
+             - Cole o link online em href do "Ver online"
+             - Cole o link do GitHub em href do "GitHub"
+             ============================================= -->
+                <article class="project-card fade-up">
+                    <!-- Se não tiver imagem, o ícone aparece como placeholder -->
+                    <div class="project-img" id="proj1-img">
+                        <i class="fas fa-code"></i>
+                        <!-- Quando tiver o print, use assim:
+            <img src="prints/projeto1.png" alt="Print do Projeto 1" />
+            -->
                     </div>
-                    <div class="project-content">
-                        <h3>Micro-community platform</h3>
-                        <p>A full-stack Micro-community platform designed to connect students based on niche interests.
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <!-- Tags de tecnologia usada -->
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <!-- Altere o título e a descrição -->
+                        <h3 class="project-title">Personal Portfolio</h3>
+                        <p class="project-desc">
+                            Portfolio website built from scratch with pure HTML, CSS, and JavaScript.
+                            Responsive design with animations and a modern dark theme.
                         </p>
-                        <div class="project-tags">
-                            <span>PHP</span>
-                            <span>HTML | CSS | JS</span>
-                            <span>MySQL</span>
+                        <div class="project-links">
+                            <!-- Altere o href para o link real do seu projeto online -->
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live demo
+                            </a>
+                            <!-- Altere o href para o link do GitHub -->
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/764ba2/ffffff?text=Project+2" alt="Project 2">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                        </div>
+                <!-- PROJETO 2 -->
+                <article class="project-card fade-up">
+                    <div class="project-img">
+                        <i class="fas fa-database"></i>
                     </div>
-                    <div class="project-content">
-                        <h3>IPTV Management App</h3>
-                        <p>Simple and intuitive IPTV customer management system.</p>
+                    <div class="project-body">
                         <div class="project-tags">
-                            <span>JavaScript</span>
-                            <span>CSS3</span>
-                            <span>Firebase</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">SQL</span>
+                        </div>
+                        <h3 class="project-title">Registration System</h3>
+                        <p class="project-desc">
+                            User registration application with MySQL database,
+                            full CRUD operations and a simple terminal interface.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live demo
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/f093fb/ffffff?text=Project+3" alt="Project 3">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                        </div>
+                <!-- PROJETO 3 -->
+                <article class="project-card fade-up">
+                    <div class="project-img">
+                        <i class="fas fa-network-wired"></i>
                     </div>
-                    <div class="project-content">
-                        <h3>ARverse</h3>
-                        <p>iOS Augmented Reality app showcasing spatial anchoring and persistent 3D content.</p>
+                    <div class="project-body">
                         <div class="project-tags">
-                            <span>SwiftUI</span>
-                            <span>ARKit</span>
-                            <span>API</span>
+                            <span class="project-tag">Networking</span>
+                            <span class="project-tag">Linux</span>
+                        </div>
+                        <h3 class="project-title">Networking Lab</h3>
+                        <p class="project-desc">
+                            Local network simulation with static routing, DNS and DHCP
+                            configured in a virtualized environment.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-file-alt"></i> Report
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/4facfe/ffffff?text=Project+4" alt="Project 4">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Blog TechWeek 2025</h3>
-                        <p>A modern, responsive web application for displaying TechWeek 2025.</p>
-                        <div class="project-tags">
-                            <span>PHP</span>
-                            <span>HTML | CSS | JS</span>
-                            <span>MySQL</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div><!-- /projects-grid -->
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
+    <!-- =============================================
+       CONTATO
+       ============================================= -->
+    <section class="section contact-bg" id="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Work Together</h3>
+            <p class="section-label">Let's talk</p>
+            <h2 class="section-title">Get in <span>touch</span></h2>
+
+            <div class="contact-wrap">
+                <!-- Informações de contato -->
+                <div class="contact-info fade-up">
+                    <h3>Let's build something together?</h3>
                     <p>
-                        I'm always interested in hearing about new projects and opportunities.
-                        Whether you have a question or just want to say hi, feel free to reach out!
+                        I'm open to internship opportunities, freelance work, and collaborative
+                        projects. Send me a message — I'll reply as soon as possible!
                     </p>
-                    <div class="contact-details">
+
+                    <div class="contact-items">
+                        <!-- Altere o e-mail -->
                         <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>murilolucena15@gmail.com</p>
-                            </div>
+                            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                            <span>seuemail@email.com</span>
                         </div>
+                        <!-- Altere a localização -->
                         <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Montreal, Canada</p>
-                            </div>
+                            <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <span>Montréal, QC, Canada</span>
                         </div>
+                        <!-- Altere o LinkedIn -->
                         <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+1 (263) 880-6415</p>
-                            </div>
+                            <div class="contact-item-icon"><i class="fab fa-linkedin"></i></div>
+                            <a href="https://linkedin.com/in/seuperfil" target="_blank" rel="noopener">
+                                linkedin.com/in/seuperfil
+                            </a>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
+
+                <!-- Formulário de contato -->
+                <form class="form fade-up" id="contactForm" novalidate>
                     <div class="form-group">
-                        <input type="text" id="name" required>
-                        <label for="name">Your Name</label>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your full name" required />
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" required>
-                        <label for="email">Your Email</label>
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="your@email.com" required />
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" required>
                         <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="What would you like to talk about?" required />
                     </div>
                     <div class="form-group">
-                        <textarea id="message" rows="5" required></textarea>
                         <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Your message here..." required></textarea>
                     </div>
+                    <!-- Mensagem de feedback do formulário -->
+                    <p class="form-msg" id="formMsg"></p>
                     <button type="submit" class="btn btn-primary">
-                        Send Message <i class="fas fa-paper-plane"></i>
+                        <i class="fas fa-paper-plane"></i> Send message
                     </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- =============================================
+       FOOTER
+       ============================================= -->
+    <footer>
         <div class="container">
-            <p>&copy; 2026 Murilo Lucena. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="https://github.com/muriloruass" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/muriloruasl" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <!-- Links de redes sociais — altere os href -->
+            <div class="social-links">
+                <a href="https://github.com/seuusuario" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/seuperfil" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://instagram.com/seuinstagram" target="_blank" class="social-link" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
+            <!-- Altere o seu nome aqui -->
+            <p>Made with <span>♥</span> by <strong>Murilo Lucena</strong> · 2025</p>
         </div>
     </footer>
 
+    <!-- Botão voltar ao topo -->
+    <button class="back-top" id="backTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript externo -->
     <script src="script.js"></script>
 </body>
 
