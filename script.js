@@ -1,4 +1,181 @@
 // ============================================================
+// SISTEMA DE INTERNACIONALIZAÇÃO (i18n)
+// ============================================================
+const TRANSLATIONS = {
+    en: {
+        'nav.home': 'Home', 'nav.about': 'About', 'nav.skills': 'Skills',
+        'nav.projects': 'Projects', 'nav.contact': 'Contact',
+        'hero.badge': 'Available for internships & projects',
+        'hero.greeting': "Hi, I'm",
+        'hero.subtitle': 'IT Analyst Student · La Salle, Montréal',
+        'hero.btn.projects': 'View projects', 'hero.btn.contact': 'Get in touch',
+        'about.label': 'Who I am', 'about.title': 'About', 'about.title.me': 'me',
+        'about.stat1': 'Year of study', 'about.stat2': 'Projects completed', 'about.stat3': 'Languages',
+        'skills.label': 'What I know', 'skills.title': 'My', 'skills.title.skills': 'skills',
+        'skills.backend': 'Backend & Databases', 'skills.tools': 'Tools',
+        'projects.label': "What I've built", 'projects.title': 'My', 'projects.title.projects': 'projects',
+        'academic.label': 'Classroom work', 'academic.title.projects': 'projects',
+        'contact.label': "Let's talk", 'contact.title': 'Get in', 'contact.title.touch': 'touch',
+        'contact.heading': "Let's build something together?",
+        'contact.intro': "I'm open to internship opportunities, freelance work, and collaborative projects. Send me a message. I'll reply as soon as possible!",
+        'form.name': 'Name', 'form.subject': 'Subject', 'form.message': 'Message', 'form.send': 'Send message',
+        'form.placeholder.name': 'Your full name', 'form.placeholder.email': 'your@email.com',
+        'form.placeholder.subject': 'What would you like to talk about?', 'form.placeholder.message': 'Your message here...',
+        'form.error': 'Please fill in all fields.', 'form.success': "✓ Message sent! I'll get back to you soon.",
+        typed: ['IT Analyst Student', 'Web Developer', 'Problem Solver', 'Brazilian in Montréal 🇧🇷🍁🇨🇦']
+    },
+    pt: {
+        'nav.home': 'Início', 'nav.about': 'Sobre', 'nav.skills': 'Skills',
+        'nav.projects': 'Projetos', 'nav.contact': 'Contato',
+        'hero.badge': 'Disponível para estágios & projetos',
+        'hero.greeting': 'Olá, sou',
+        'hero.subtitle': 'Estudante de Analyst IT · La Salle, Montréal',
+        'hero.btn.projects': 'Ver projetos', 'hero.btn.contact': 'Entrar em contato',
+        'about.label': 'Quem sou eu', 'about.title': 'Sobre', 'about.title.me': 'mim',
+        'about.stat1': 'Ano de curso', 'about.stat2': 'Projetos concluídos', 'about.stat3': 'Idiomas',
+        'skills.label': 'O que eu sei', 'skills.title': 'Minhas', 'skills.title.skills': 'skills',
+        'skills.backend': 'Backend & Banco de Dados', 'skills.tools': 'Ferramentas',
+        'projects.label': 'O que eu construí', 'projects.title': 'Meus', 'projects.title.projects': 'projetos',
+        'academic.label': 'Trabalhos acadêmicos', 'academic.title.projects': 'projetos',
+        'contact.label': 'Bora conversar', 'contact.title': 'Entre em', 'contact.title.touch': 'contato',
+        'contact.heading': 'Vamos construir algo juntos?',
+        'contact.intro': 'Estou aberto a oportunidades de estágio, freelas e projetos colaborativos. Manda uma mensagem — responderei assim que possível!',
+        'form.name': 'Nome', 'form.subject': 'Assunto', 'form.message': 'Mensagem', 'form.send': 'Enviar mensagem',
+        'form.placeholder.name': 'Seu nome completo', 'form.placeholder.email': 'seu@email.com',
+        'form.placeholder.subject': 'Sobre o que você quer falar?', 'form.placeholder.message': 'Sua mensagem aqui...',
+        'form.error': 'Por favor, preencha todos os campos.', 'form.success': '✓ Mensagem enviada! Responderei em breve.',
+        typed: ['Estudante de Analyst IT', 'Desenvolvedor Web', 'Solucionador de Problemas', 'Brasileiro em Montréal 🇧🇷🍁🇨🇦']
+    },
+    fr: {
+        'nav.home': 'Accueil', 'nav.about': 'À propos', 'nav.skills': 'Compétences',
+        'nav.projects': 'Projets', 'nav.contact': 'Contact',
+        'hero.badge': 'Disponible pour stages & projets',
+        'hero.greeting': 'Bonjour, je suis',
+        'hero.subtitle': 'Étudiant Analyste IT · La Salle, Montréal',
+        'hero.btn.projects': 'Voir les projets', 'hero.btn.contact': 'Me contacter',
+        'about.label': 'Qui suis-je', 'about.title': 'À propos de', 'about.title.me': 'moi',
+        'about.stat1': "Année d'études", 'about.stat2': 'Projets complétés', 'about.stat3': 'Langues',
+        'skills.label': 'Ce que je sais', 'skills.title': 'Mes', 'skills.title.skills': 'compétences',
+        'skills.backend': 'Backend & Bases de données', 'skills.tools': 'Outils',
+        'projects.label': "Ce que j'ai créé", 'projects.title': 'Mes', 'projects.title.projects': 'projets',
+        'academic.label': 'Travaux académiques', 'academic.title.projects': 'projets',
+        'contact.label': 'Parlons', 'contact.title': 'Me', 'contact.title.touch': 'contacter',
+        'contact.heading': 'Construisons quelque chose ensemble?',
+        'contact.intro': "Je suis ouvert aux opportunités de stage, au travail en freelance et aux projets collaboratifs. Envoyez-moi un message — je répondrai dès que possible!",
+        'form.name': 'Nom', 'form.subject': 'Sujet', 'form.message': 'Message', 'form.send': 'Envoyer',
+        'form.placeholder.name': 'Votre nom complet', 'form.placeholder.email': 'votre@email.com',
+        'form.placeholder.subject': 'De quoi voulez-vous parler?', 'form.placeholder.message': 'Votre message ici...',
+        'form.error': 'Veuillez remplir tous les champs.', 'form.success': '✓ Message envoyé! Je vous répondrai bientôt.',
+        typed: ['Étudiant Analyste IT', 'Développeur Web', 'Solutionneur de problèmes', 'Brésilien à Montréal 🇧🇷🍁🇨🇦']
+    },
+    es: {
+        'nav.home': 'Inicio', 'nav.about': 'Sobre mí', 'nav.skills': 'Habilidades',
+        'nav.projects': 'Proyectos', 'nav.contact': 'Contacto',
+        'hero.badge': 'Disponible para prácticas & proyectos',
+        'hero.greeting': 'Hola, soy',
+        'hero.subtitle': 'Estudiante de Analyst IT · La Salle, Montréal',
+        'hero.btn.projects': 'Ver proyectos', 'hero.btn.contact': 'Contáctame',
+        'about.label': 'Quién soy', 'about.title': 'Sobre', 'about.title.me': 'mí',
+        'about.stat1': 'Año de estudio', 'about.stat2': 'Proyectos completados', 'about.stat3': 'Idiomas',
+        'skills.label': 'Lo que sé', 'skills.title': 'Mis', 'skills.title.skills': 'habilidades',
+        'skills.backend': 'Backend & Bases de datos', 'skills.tools': 'Herramientas',
+        'projects.label': 'Lo que he construido', 'projects.title': 'Mis', 'projects.title.projects': 'proyectos',
+        'academic.label': 'Trabajos académicos', 'academic.title.projects': 'proyectos',
+        'contact.label': 'Hablemos', 'contact.title': 'Ponte en', 'contact.title.touch': 'contacto',
+        'contact.heading': '¿Construyamos algo juntos?',
+        'contact.intro': 'Estoy abierto a oportunidades de prácticas, trabajo freelance y proyectos colaborativos. ¡Envíame un mensaje y te responderé lo antes posible!',
+        'form.name': 'Nombre', 'form.subject': 'Asunto', 'form.message': 'Mensaje', 'form.send': 'Enviar mensaje',
+        'form.placeholder.name': 'Tu nombre completo', 'form.placeholder.email': 'tu@email.com',
+        'form.placeholder.subject': '¿De qué quieres hablar?', 'form.placeholder.message': 'Tu mensaje aquí...',
+        'form.error': 'Por favor, completa todos los campos.', 'form.success': '✓ ¡Mensaje enviado! Te responderé pronto.',
+        typed: ['Estudiante de Analyst IT', 'Desarrollador Web', 'Solucionador de Problemas', 'Brasileño en Montréal 🇧🇷🍁🇨🇦']
+    },
+    it: {
+        'nav.home': 'Home', 'nav.about': 'Chi sono', 'nav.skills': 'Competenze',
+        'nav.projects': 'Progetti', 'nav.contact': 'Contatto',
+        'hero.badge': 'Disponibile per stage & progetti',
+        'hero.greeting': 'Ciao, sono',
+        'hero.subtitle': 'Studente di Analyst IT · La Salle, Montréal',
+        'hero.btn.projects': 'Vedi progetti', 'hero.btn.contact': 'Contattami',
+        'about.label': 'Chi sono', 'about.title': 'Su di', 'about.title.me': 'me',
+        'about.stat1': 'Anno di studio', 'about.stat2': 'Progetti completati', 'about.stat3': 'Lingue',
+        'skills.label': 'Cosa so fare', 'skills.title': 'Le mie', 'skills.title.skills': 'competenze',
+        'skills.backend': 'Backend & Database', 'skills.tools': 'Strumenti',
+        'projects.label': 'Cosa ho creato', 'projects.title': 'I miei', 'projects.title.projects': 'progetti',
+        'academic.label': 'Lavori accademici', 'academic.title.projects': 'progetti',
+        'contact.label': 'Parliamo', 'contact.title': 'Mettiti in', 'contact.title.touch': 'contatto',
+        'contact.heading': 'Costruiamo qualcosa insieme?',
+        'contact.intro': 'Sono aperto a opportunità di stage, lavoro freelance e progetti collaborativi. Mandami un messaggio — risponderò il prima possibile!',
+        'form.name': 'Nome', 'form.subject': 'Oggetto', 'form.message': 'Messaggio', 'form.send': 'Invia messaggio',
+        'form.placeholder.name': 'Il tuo nome completo', 'form.placeholder.email': 'tua@email.com',
+        'form.placeholder.subject': 'Di cosa vuoi parlare?', 'form.placeholder.message': 'Il tuo messaggio qui...',
+        'form.error': 'Per favore compila tutti i campi.', 'form.success': '✓ Messaggio inviato! Ti risponderò presto.',
+        typed: ['Studente di Analyst IT', 'Sviluppatore Web', 'Risolutore di Problemi', 'Brasiliano a Montréal 🇧🇷🍁🇨🇦']
+    }
+};
+
+const LANG_LABELS = { en: 'EN', pt: 'PT', fr: 'FR', es: 'ES', it: 'IT' };
+
+let currentLang = localStorage.getItem('lang') || 'en';
+
+function applyLanguage(code) {
+    const t = TRANSLATIONS[code];
+    if (!t) return;
+    currentLang = code;
+    localStorage.setItem('lang', code);
+    document.documentElement.lang = code;
+
+    // Swap text content
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.innerHTML = t[key];
+    });
+
+    // Swap placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (t[key] !== undefined) el.placeholder = t[key];
+    });
+
+    // Update navbar badge
+    document.getElementById('langCurrent').textContent = LANG_LABELS[code];
+
+    // Update active option in modal
+    document.querySelectorAll('.lang-option').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === code);
+    });
+
+    // Update typed phrases
+    TYPED_PHRASES.length = 0;
+    (t.typed || TRANSLATIONS.en.typed).forEach(p => TYPED_PHRASES.push(p));
+}
+
+// ============================================================
+// MODAL LOGIC
+// ============================================================
+const langModal = document.getElementById('langModal');
+const langBtn = document.getElementById('langBtn');
+const langClose = document.getElementById('langModalClose');
+
+function openLangModal() { langModal.classList.add('open'); }
+function closeLangModal() { langModal.classList.remove('open'); }
+
+langBtn.addEventListener('click', openLangModal);
+langClose.addEventListener('click', closeLangModal);
+langModal.addEventListener('click', e => { if (e.target === langModal) closeLangModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLangModal(); });
+
+document.querySelectorAll('.lang-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+        applyLanguage(btn.dataset.lang);
+        closeLangModal();
+    });
+});
+
+// Apply saved/default language on load
+applyLanguage(currentLang);
+
+// ============================================================
 // TEXTOS DO EFEITO DIGITADO (hero)
 // Altere as frases abaixo para descrever você
 // ============================================================
@@ -6,8 +183,9 @@ const TYPED_PHRASES = [
     'IT Analyst Student',
     'Web Developer',
     'Problem Solver',
-    'Brasileiro em Montréal 🇧🇷🍁🇨🇦'
+    'Brazilian in Montréal 🇧🇷🍁🇨🇦'
 ];
+
 
 // ============================================================
 // FADE-IN AO CARREGAR A PÁGINA

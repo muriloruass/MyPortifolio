@@ -33,15 +33,21 @@
             <a href="#home" class="nav-logo">M<span>.</span>L</a>
 
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
 
-            <div class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span><span></span><span></span>
+            <div class="nav-right">
+                <button class="lang-btn" id="langBtn" aria-label="Select language">
+                    <i class="fas fa-globe"></i>
+                    <span class="lang-current" id="langCurrent">EN</span>
+                </button>
+                <div class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </div>
             </div>
         </div>
     </nav>
@@ -57,17 +63,16 @@
                 <!-- Badge de disponibilidade -->
                 <div class="hero-badge">
                     <span class="dot"></span>
-                    <!-- Altere o texto do badge -->
-                    Available for internships &amp; projects
+                    <span data-i18n="hero.badge">Available for internships &amp; projects</span>
                 </div>
 
                 <!-- Nome  -->
                 <h1>
-                    Hi, I'm<br>
+                    <span data-i18n="hero.greeting">Hi, I'm</span><br>
                     <span class="name">Murilo Lucena</span>
                 </h1>
 
-                <p class="hero-subtitle">IT Analyst Student · La Salle, Montréal</p>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">IT Analyst Student · La Salle, Montréal</p>
 
                 <!-- Texto animado — altere as frases no JavaScript -->
                 <div class="typed-wrap">
@@ -76,10 +81,10 @@
 
                 <div class="hero-btns">
                     <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-folder-open"></i> View projects
+                        <i class="fas fa-folder-open"></i> <span data-i18n="hero.btn.projects">View projects</span>
                     </a>
                     <a href="#contact" class="btn btn-outline">
-                        <i class="fas fa-paper-plane"></i> Get in touch
+                        <i class="fas fa-paper-plane"></i> <span data-i18n="hero.btn.contact">Get in touch</span>
                     </a>
                     <a href="https://github.com/muriloruass" target="_blank" rel="noopener" class="btn btn-icon"
                         aria-label="GitHub">
@@ -99,8 +104,9 @@
        ============================================= -->
     <section class="section" id="about">
         <div class="container">
-            <p class="section-label">Who I am</p>
-            <h2 class="section-title">About <span>me</span></h2>
+            <p class="section-label" data-i18n="about.label">Who I am</p>
+            <h2 class="section-title"><span data-i18n="about.title">About</span> <span
+                    data-i18n="about.title.me">me</span></h2>
 
             <div class="about-grid">
                 <!-- FOTO — substitua o src pelo caminho da sua foto -->
@@ -135,15 +141,15 @@
                     <div class="about-stats">
                         <div class="stat-card fade-up">
                             <div class="stat-num">3rd</div>
-                            <div class="stat-desc">Year of study</div>
+                            <div class="stat-desc" data-i18n="about.stat1">Year of study</div>
                         </div>
                         <div class="stat-card fade-up">
                             <div class="stat-num">7+</div>
-                            <div class="stat-desc">Projects completed</div>
+                            <div class="stat-desc" data-i18n="about.stat2">Projects completed</div>
                         </div>
                         <div class="stat-card fade-up">
                             <div class="stat-num">3</div>
-                            <div class="stat-desc">Languages</div>
+                            <div class="stat-desc" data-i18n="about.stat3">Languages</div>
                         </div>
                     </div>
                 </div>
@@ -156,8 +162,9 @@
        ============================================= -->
     <section class="section skills-bg" id="skills">
         <div class="container">
-            <p class="section-label">What I know</p>
-            <h2 class="section-title">My <span>skills</span></h2>
+            <p class="section-label" data-i18n="skills.label">What I know</p>
+            <h2 class="section-title"><span data-i18n="skills.title">My</span> <span
+                    data-i18n="skills.title.skills">skills</span></h2>
 
             <div class="skills-grid">
 
@@ -178,7 +185,7 @@
 
                 <div class="skill-card fade-up">
                     <div class="skill-card-icon"><i class="fas fa-server"></i></div>
-                    <h3>Backend &amp; Databases</h3>
+                    <h3 data-i18n="skills.backend">Backend &amp; Databases</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">SQL</span>
@@ -200,7 +207,7 @@
 
                 <div class="skill-card fade-up">
                     <div class="skill-card-icon"><i class="fas fa-tools"></i></div>
-                    <h3>Tools</h3>
+                    <h3 data-i18n="skills.tools">Tools</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Git</span>
                         <span class="skill-tag">GitHub</span>
@@ -218,8 +225,9 @@
        ============================================= -->
     <section class="section" id="projects">
         <div class="container">
-            <p class="section-label">What I've built</p>
-            <h2 class="section-title">My <span>projects</span></h2>
+            <p class="section-label" data-i18n="projects.label">What I've built</p>
+            <h2 class="section-title"><span data-i18n="projects.title">My</span> <span
+                    data-i18n="projects.title.projects">projects</span></h2>
 
             <div class="projects-grid">
 
@@ -340,8 +348,8 @@
        ============================================= -->
     <section class="section academic-bg" id="academic">
         <div class="container">
-            <p class="section-label">Classroom work</p>
-            <h2 class="section-title">Academic <span>projects</span></h2>
+            <p class="section-label" data-i18n="academic.label">Classroom work</p>
+            <h2 class="section-title">Academic <span data-i18n="academic.title.projects">projects</span></h2>
 
             <div class="academic-grid">
 
@@ -440,15 +448,15 @@
        ============================================= -->
     <section class="section contact-bg" id="contact">
         <div class="container">
-            <p class="section-label">Let's talk</p>
-            <h2 class="section-title">Get in <span>touch</span></h2>
+            <p class="section-label" data-i18n="contact.label">Let's talk</p>
+            <h2 class="section-title"><span data-i18n="contact.title">Get in</span> <span
+                    data-i18n="contact.title.touch">touch</span></h2>
 
             <div class="contact-wrap">
                 <!-- Informações de contato -->
                 <div class="contact-info fade-up">
-                    <h3>Let's build something together?</h3>
-                    <p>
-                        I'm open to internship opportunities, freelance work, and collaborative
+                    <h3 data-i18n="contact.heading">Let's build something together?</h3>
+                    <p data-i18n="contact.intro">I'm open to internship opportunities, freelance work, and collaborative
                         projects. Send me a message. I'll reply as soon as possible!
                     </p>
 
@@ -476,25 +484,29 @@
                 <!-- Formulário de contato -->
                 <form class="form fade-up" id="contactForm" novalidate>
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" placeholder="Your full name" required />
+                        <label for="name" data-i18n="form.name">Name</label>
+                        <input type="text" id="name" data-i18n-placeholder="form.placeholder.name"
+                            placeholder="Your full name" required />
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" placeholder="your@email.com" required />
+                        <input type="email" id="email" data-i18n-placeholder="form.placeholder.email"
+                            placeholder="your@email.com" required />
                     </div>
                     <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" placeholder="What would you like to talk about?" required />
+                        <label for="subject" data-i18n="form.subject">Subject</label>
+                        <input type="text" id="subject" data-i18n-placeholder="form.placeholder.subject"
+                            placeholder="What would you like to talk about?" required />
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="5" placeholder="Your message here..." required></textarea>
+                        <label for="message" data-i18n="form.message">Message</label>
+                        <textarea id="message" rows="5" data-i18n-placeholder="form.placeholder.message"
+                            placeholder="Your message here..." required></textarea>
                     </div>
                     <!-- Mensagem de feedback do formulário -->
                     <p class="form-msg" id="formMsg"></p>
                     <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i> Send message
+                        <i class="fas fa-paper-plane"></i> <span data-i18n="form.send">Send message</span>
                     </button>
                 </form>
             </div>
@@ -528,6 +540,61 @@
     <button class="back-top" id="backTop" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- =============================================
+       MODAL DE IDIOMA
+       ============================================= -->
+    <div class="lang-modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-label="Select language">
+        <div class="lang-modal-box">
+            <div class="lang-modal-header">
+                <i class="fas fa-globe"></i>
+                <span>Select language</span>
+                <button class="lang-modal-close" id="langModalClose" aria-label="Close">&times;</button>
+            </div>
+            <div class="lang-options">
+                <button class="lang-option" data-lang="en">
+                    <span class="lang-flag">🇨🇦</span>
+                    <div class="lang-names">
+                        <span class="lang-name">English</span>
+                        <span class="lang-native">English</span>
+                    </div>
+                    <i class="fas fa-check lang-check"></i>
+                </button>
+                <button class="lang-option" data-lang="pt">
+                    <span class="lang-flag">🇧🇷</span>
+                    <div class="lang-names">
+                        <span class="lang-name">Portuguese</span>
+                        <span class="lang-native">Português (Brasil)</span>
+                    </div>
+                    <i class="fas fa-check lang-check"></i>
+                </button>
+                <button class="lang-option" data-lang="fr">
+                    <span class="lang-flag">🇫🇷</span>
+                    <div class="lang-names">
+                        <span class="lang-name">French</span>
+                        <span class="lang-native">Français</span>
+                    </div>
+                    <i class="fas fa-check lang-check"></i>
+                </button>
+                <button class="lang-option" data-lang="es">
+                    <span class="lang-flag">🇪🇸</span>
+                    <div class="lang-names">
+                        <span class="lang-name">Spanish</span>
+                        <span class="lang-native">Español</span>
+                    </div>
+                    <i class="fas fa-check lang-check"></i>
+                </button>
+                <button class="lang-option" data-lang="it">
+                    <span class="lang-flag">🇮🇹</span>
+                    <div class="lang-names">
+                        <span class="lang-name">Italian</span>
+                        <span class="lang-native">Italiano</span>
+                    </div>
+                    <i class="fas fa-check lang-check"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- JavaScript externo -->
     <script src="script.js"></script>
