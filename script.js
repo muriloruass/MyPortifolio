@@ -172,12 +172,9 @@ document.querySelectorAll('.lang-option').forEach(btn => {
     });
 });
 
-// Apply saved/default language on load
-applyLanguage(currentLang);
-
 // ============================================================
 // TEXTOS DO EFEITO DIGITADO (hero)
-// Altere as frases abaixo para descrever você
+// inicializado aqui; atualizado dinamicamente pelo i18n
 // ============================================================
 const TYPED_PHRASES = [
     'IT Analyst Student',
@@ -185,6 +182,9 @@ const TYPED_PHRASES = [
     'Problem Solver',
     'Brazilian in Montréal 🇧🇷🍁🇨🇦'
 ];
+
+// Apply saved/default language on load
+applyLanguage(currentLang);
 
 
 // ============================================================
